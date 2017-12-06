@@ -95,14 +95,24 @@ var _sum = __webpack_require__(0);
 
 var sum = _interopRequireWildcard(_sum);
 
+var _division = __webpack_require__(3);
+
+var _division2 = _interopRequireDefault(_division);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-// index.js - our application logic
-var totalMultiply = multiply(5, 3);
-var totalSum = sum(5, 3);
+var totalMultiply = multiply.default(5, 3); // index.js - our application logic
+
+var totalSum = sum.default(5, 3);
+var division = (0, _division2.default)(10, 5);
 
 console.log('Product of 5 and 3 = ' + totalMultiply);
 console.log('Sum of 5 and 3  = ' + totalSum);
+console.log('Result = ' + division);
+
+document.write("<h1> " + division + " </h1>");
 
 /***/ }),
 /* 2 */
@@ -114,17 +124,42 @@ console.log('Sum of 5 and 3  = ' + totalSum);
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-// multiply.js
-var sum = __webpack_require__(0);
+
+var _sum = __webpack_require__(0);
+
+var _sum2 = _interopRequireDefault(_sum);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var multiply = function multiply(a, b) {
     var total = 0;
-    for (var i = 1; i < b; i++) {
-        total = sum(a, total);
+    for (var i = 1; i <= b; i++) {
+        total = (0, _sum2.default)(a, total);
     }
     return total;
-};
+}; // multiply.js
+
+
+var testingbranch = 'testing branch new';
+
 exports.default = multiply;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var divide = function divide(a, b) {
+
+  return a / b;
+};
+
+exports.default = divide;
 
 /***/ })
 /******/ ]);
