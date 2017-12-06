@@ -60,57 +60,71 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__multiply_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sum_js__ = __webpack_require__(1);
-// index.js - our application logic
 
 
-
-var totalMultiply = __WEBPACK_IMPORTED_MODULE_0__multiply_js__(5, 3);
-var totalSum = __WEBPACK_IMPORTED_MODULE_1__sum_js__(5, 3);
-
-console.log('Product of 5 and 3 = ' + totalMultiply);
-console.log('Sum of 5 and 3 = ' + totalSum);
-
-/***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 // sum.js
-var sum = function (a, b) {
+var sum = function sum(a, b) {
     return a + b;
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (sum);
+exports.default = sum;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _multiply = __webpack_require__(2);
+
+var multiply = _interopRequireWildcard(_multiply);
+
+var _sum = __webpack_require__(0);
+
+var sum = _interopRequireWildcard(_sum);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+// index.js - our application logic
+var totalMultiply = multiply(5, 3);
+var totalSum = sum(5, 3);
+
+console.log('Product of 5 and 3 = ' + totalMultiply);
+console.log('Sum of 5 and 3  = ' + totalSum);
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-// multiply.js
-var sum = __webpack_require__(1);
 
-var multiply = function (a, b) {
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+// multiply.js
+var sum = __webpack_require__(0);
+
+var multiply = function multiply(a, b) {
     var total = 0;
-    for (var i = 0; i < b; i++) {
+    for (var i = 1; i < b; i++) {
         total = sum(a, total);
     }
     return total;
 };
-/* harmony default export */ __webpack_exports__["default"] = (multiply);
+exports.default = multiply;
 
 /***/ })
 /******/ ]);
