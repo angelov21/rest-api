@@ -1,20 +1,20 @@
 {
-  "name": "webpack-test",
+  "name": "rest-api",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
-  "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "webpack": "^3.8.1"
-  },
-  "devDependencies": {},
+  "main": "server.js",
   "scripts": {
-    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "./node_modules/.bin/watch index.js"
+    "start": "node ./app/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "aleksandar.angelov",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.11",
+    "mongoose-sequence": "^5.2.0"
+  }
 }
